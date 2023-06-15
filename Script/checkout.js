@@ -139,11 +139,15 @@ const products = [
     products.forEach((product) => {
       const productElement = document.createElement("div");
       productElement.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" >
-          <h3>${product.name}</h3>
-          <p>${product.desc}</p>
-          <p> R ${product.price}</p>        
-          <button onclick="addToCart(${product.id})" >Add to cart</button>`;
+          <div class="card">
+                <img src="${product.image}" alt="" class="card-img">
+            <div class="card-title">${product.name}</div>
+            <div class="card-text">
+                <p>$ ${product.price}</p></br>
+                <p>${product.quantity}</p>
+            </div>
+          <button onclick="addToCart(${product.id})" >Add to cart</button>
+          </div>`;
       ourProducts.appendChild(productElement);
     });
   }
