@@ -119,12 +119,6 @@ body {
   grid-template-columns: 50% 50%;
   padding: 3%;
 }
-/* checkout card */
-#products {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  padding: 3%;
-}
 
 .card {
   color: silver;
@@ -148,7 +142,7 @@ body {
 .card-img {
   border-radius: 50px;
   width: 50%;
-  height: 100px;
+  height: 50%;
 }
 
 /* images on Main Start */
@@ -176,24 +170,6 @@ body {
 }
 
 /* Card Js-populated End */
-
-/* Cart btn Start*/
-#myBtn{
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: x-large;
-  position: fixed;
-  right: 2%;
-  bottom: 2%;
-}
-
-#myBtn:hover {
-  background-color: #111;
-  font-size: xx-large;
-}
-
-/* Cart btn End */
 
 /* Main Section Start */
 #first-view {
@@ -226,7 +202,6 @@ button {
   margin-right: auto;
   margin-top: 2%;
   text-transform: uppercase;
-  border-radius: 25px;
 }
 
 button a {
@@ -268,57 +243,41 @@ footer {
 /* Footer End */
 
 /* Home Page End */
-/* Modal Start */
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
+/* Contact Page Start*/
+#contact {
+  background-image: radial-gradient(purple,black);
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border-radius: 20px;
+  margin-top: 10px;
 }
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Inside Cart */
-.inner-layout {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.inner-img {
-  width: 80px;
-  height: 80px;
-}
-.inner-pro {
+#contact label{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
-/* Modal End */
+label input{
+  border-radius: 25px;
+  text-align: center;
+  font-size: large;
+  padding: 5px;
+  margin-top: 5px;
+}
+label textarea {
+  border-radius: 25px;
+  text-align: center;
+  resize: none;
+  padding: 5px;
+  font-size: large;
+  margin-top: 5px;
+}
+#sub-btn {
+  border-radius: 20px;
+}
+#sub-btn:hover {
+  font-size: medium;
+  font-weight: bolder;
+  background-color: transparent;
+  box-shadow: transparent;
+}
+/* Contact Page End */
