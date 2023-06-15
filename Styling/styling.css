@@ -243,3 +243,18 @@ footer {
 /* Footer End */
 
 /* Home Page End */
+/* Contact Page Start*/
+#contact label{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+label input{
+  border-radius: 25px;
+  text-align: center;
+  font-size: large;
+  padding: 5px;
+}
+
+/* Contact Page End */

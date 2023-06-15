@@ -1,59 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styling/styling.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Styling/styling.css">
+  <title>Document</title>
 </head>
+
 <body>
 
-    <!-- Start of Contact Main -->
-    <main>
-        <div id="mySidenav" class="sidenav">
-            <div id="top">
-              <a href="./index.html"
-                ><img
-                  src="https://i.postimg.cc/xTjh0n2R/Free-Sample-By-Wix.png"
-                  alt=""
-                  id="logo"
-              /></a>
-              <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-            </div>
-            <div id="hover">
-              <a href="./checkout.html">Proudct</a>
-              <a href="./about.html">About</a>
-              <a href="./admin.html">Admin</a>
-              <a href="./contact.html">Contact</a>
-            </div>
-          </div>
-          <div id="main">
-            <span style="font-size: 200%; cursor: pointer" onclick="openNav()"
-              >&#9776;</span
-            >
-    </main>
-    <!-- End of Contact Main -->
+  <!-- Start of Contact Main -->
+  <main>
+    <div id="mySidenav" class="sidenav">
+      <div id="top">
+        <a href="./index.html"><img src="https://i.postimg.cc/xTjh0n2R/Free-Sample-By-Wix.png" alt="" id="logo" /></a>
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+      </div>
+      <div id="hover">
+        <a href="./checkout.html">Proudct</a>
+        <a href="./about.html">About</a>
+        <a href="./admin.html">Admin</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="main">
+      <span style="font-size: 200%; cursor: pointer" onclick="openNav()">&#9776;</span>
+      <!-- Contact Page Start -->
+      <section id="contact">
+        <form action="https://formspree.io/f/mqkorbqv" method="POST">
+          <!-- <div> -->
+            <label>
+              Contact Number:
+              <input type="tel" name="phone-number" placeholder="input contact number">
+            </label>
+          <!-- </div>
+          <div> -->
+            <label>
+              Email:
+              <input type="email" name="email" placeholder="input email-address">
+            </label>
+          <!-- </div> -->
+          <!-- <div> -->
+            <label>
+              Your message:
+              <textarea name="message" cols="20" rows="2"></textarea>
+            </label>
+          <!-- </div> -->
+          <!-- <div> -->
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+          <!-- </div> -->
+        </form>
+      </section>
+      <!-- Contact Page End -->
+  </main>
+  <!-- End of Contact Main -->
 
-    <!-- Start of Footer -->
-    <footer>
-        <div id="conditions">
-          <div>
-            <h3>Contact Us At:</h3>
-            <p>619 Masterio Estate</p>
-            <p>Populas 51</p>
-            <p>Planet 999</p>
-            <p>Galaxy #4</p>
-          </div>
-          <div>Not for Sale to humans under 300years old</div>
-          <div>Terms And Conditions</div>
-        </div>
-        <div class="sections">
-          <p id="copy">&copy;NeglectedNPC 2023</p>
-        </div>
-      </footer>
-      <!-- End of Footer -->
+  <!-- Start of Footer -->
+  <footer>
+    <div id="conditions">
+      <div>
+        <h3>Contact Us At:</h3>
+        <p>619 Masterio Estate</p>
+        <p>Populas 51</p>
+        <p>Planet 999</p>
+        <p>Galaxy #4</p>
+      </div>
+      <div>Not for Sale to humans under 300years old</div>
+      <div>Terms And Conditions</div>
+    </div>
+    <div class="sections">
+      <p id="copy">&copy;NeglectedNPC 2023</p>
+    </div>
+  </footer>
+  <!-- End of Footer -->
 
-    <script src="../Script/code.js"></script>
+  <script src="../Script/code.js"></script>
 </body>
+
 </html>
