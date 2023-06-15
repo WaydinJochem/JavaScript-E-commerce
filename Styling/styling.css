@@ -244,17 +244,38 @@ footer {
 
 /* Home Page End */
 /* Contact Page Start*/
+#contact {
+  background-image: radial-gradient(purple,black);
+  padding: 20px;
+}
 #contact label{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 label input{
   border-radius: 25px;
   text-align: center;
   font-size: large;
   padding: 5px;
+  margin-top: 5px;
 }
-
+label textarea {
+  border-radius: 25px;
+  text-align: center;
+  resize: none;
+  padding: 5px;
+  font-size: large;
+  margin-top: 5px;
+}
+#sub-btn {
+  border-radius: 20px;
+}
+#sub-btn:hover {
+  font-size: medium;
+  font-weight: bolder;
+  background-color: transparent;
+  box-shadow: transparent;
+}
 /* Contact Page End */
