@@ -177,6 +177,24 @@ body {
 
 /* Card Js-populated End */
 
+/* Cart btn Start*/
+#myBtn{
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: x-large;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+}
+
+#myBtn:hover {
+  background-color: #111;
+  font-size: xx-large;
+}
+
+/* Cart btn End */
+
 /* Main Section Start */
 #first-view {
   background-image: url("https://i.postimg.cc/rpdqdL5C/istockphoto-1205603080-612x612.jpg");
