@@ -178,9 +178,8 @@ function updateCart() {
     <img src="${product.image}">
       <span>${product.name}</span>
       <span>${product.price}</span>
-      <input type="number" placeholder="1" min="1" width="50px" height="40px">
       <p>Total $ ${product.price}</p>
-      <button onclick="removeFromCart(${index})" class="rembutton">✖</button>
+      <button onclick="removeFromCart(${index})" class="rembutton">&#x1F5D1;</button>
     `;
     cartContainer.appendChild(cartItem);
   });
