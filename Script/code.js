@@ -76,36 +76,3 @@
     shopButton();
     //Products button link End
 //Home Page Js End
-
-//Footer start
-    function linksBottom() {
-        const icons = [
-            {
-                icon: 'https://i.postimg.cc/C1HbZ63J/icons8-twitter-circled-2.gif',
-                link:'https://twitter.com/',
-            },
-            {
-                icon: 'https://i.postimg.cc/B6GxnGVX/icons8-linkedin-circled-1.gif',
-                link:'https://za.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F',
-            },
-            {
-                icon: 'https://i.postimg.cc/mkmMj12H/icons8-instagram-1.gif',
-                link:'https://www.instagram.com/',
-            },
-            {
-                icon: 'https://i.postimg.cc/3N1jqb9W/icons8-github-1.gif',
-                link:'https://www.instagram.com/',
-            },
-
-        ];
-
-        const bottom = document.getElementById('copy');
-        const holder = document.createElement('div');
-        icons.forEach((data) => {
-            holder.innerHTML += `
-           <a href="${data.link}"><img src=${data.icon} alt="" class="icons"></a>`
-        });
-        bottom.appendChild(holder);
-    }
-linksBottom();
-//Footer end
