@@ -15,7 +15,7 @@ const products = [
       name: "pistol",
       desc: "",
       price: 2,
-      quantity: 2,
+      quantity: 1,
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const products = [
       name: "AR",
       desc: "",
       price: 3,
-      quantity: 3,
+      quantity: 1,
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ const products = [
       name: "laser",
       desc: "",
       price: 4,
-      quantity: 4,
+      quantity: 1,
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const products = [
       name: "shotgun",
       desc: "",
       price: 5,
-      quantity: 5,
+      quantity: 1,
     },
     {
       id: 6,
@@ -50,7 +50,7 @@ const products = [
       name: "laser",
       desc: "",
       price: 6,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 7,
@@ -58,7 +58,7 @@ const products = [
       name: "AR",
       desc: "",
       price: 7,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 8,
@@ -66,7 +66,7 @@ const products = [
       name: "shotgun",
       desc: "",
       price: 8,
-      quantity: 6,
+      quantity:1,
     },
     {
       id: 9,
@@ -74,7 +74,7 @@ const products = [
       name: "pistol",
       desc: "",
       price: 9,
-      quantity: 6,
+      quantity:1,
     },
     {
       id: 10,
@@ -82,7 +82,7 @@ const products = [
       name: "AR",
       desc: "",
       price: 10,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 11,
@@ -90,7 +90,7 @@ const products = [
       name: "pistol",
       desc: "",
       price: 11,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 12,
@@ -98,7 +98,7 @@ const products = [
       name: "shotgun",
       desc: "",
       price: 12,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 13,
@@ -106,7 +106,7 @@ const products = [
       name: "laser",
       desc: "",
       price: 13,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 14,
@@ -114,7 +114,7 @@ const products = [
       name: "AR",
       desc: "",
       price: 14,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 15,
@@ -122,7 +122,7 @@ const products = [
       name: "pistol",
       desc: "",
       price: 15,
-      quantity: 6,
+      quantity: 1,
     },
     {
       id: 16,
@@ -130,115 +130,76 @@ const products = [
       name: "laser",
       desc: "",
       price: 16,
-      quantity: 6,
+      quantity: 1,
     },
   ];
   
-  function displayProducts() {
-    const ourProducts = document.getElementById("products");
-    products.forEach((product) => {
-      const productElement = document.createElement("div");
-      productElement.innerHTML = `
-          <div class="card">
+ 
+function displayProducts() {
+  const ourProducts = document.getElementById("products");
+  products.forEach((product) => {
+    const productElement = document.createElement("div");
+    productElement.innerHTML = `
+       <div class="card">
                 <img src="${product.image}" alt="" class="card-img">
             <div class="card-title">${product.name}</div>
             <div class="card-text">
                 <p>$ ${product.price}</p></br>
-                <p>${product.quantity}</p>
-            </div>
-          <button onclick="addToCart(${product.id})" >Add to cart</button>
-          </div>`;
-      ourProducts.appendChild(productElement);
-    });
-  }
-  
-  // const cart = [];
-  
-  // function addToCart(productId) {
-  //   const cartContainer = document.getElementById("cart-container");
-  //   const product = products.find((product) => product.id === productId);
-  
-  //   if (product && product.quantity > 0) {
-  //     cart.push(product);
-  //     product.quantity++;
-  //     updateCart();
-  //   }
-  // }
-  
-  // function updateCart() {
-  //     const cartContainer = document.getElementById("cart-container");
-  //     cartContainer.innerHTML = "";
-  
-  //     cart.forEach(product => {
-  //         const cartItem = document.createElement("div")
-  //         cartItem.innerHTML = `<span>${product.name}</span>
-  //         <span>${product.price}</span>
-  //         `
-  //         cartContainer.appendChild(cartItem)
-  //     }) 
-  // }
-  
-  displayProducts();
+                <button onclick="addToCart(${product.id})">Add To Cart</button>
+            </div>`;
+    ourProducts.appendChild(productElement);
+  });
+}
 
-  // 2nd Function Start
-      let cart = JSON.parse(localStorage.getItem("cart"));
-      if (!cart) {
-        cart = [];
-        localStorage.setItem("cart", JSON.stringify(cart));
-      }
-      
-      // Shopping cart
-      function updateCart() {
-        const cartElement = document.getElementById("cart");
-        cart.forEach((product) => {
-          const cartItem = document.createElement("div");
-          cartItem.innerHTML = `
-          
-          <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-          <div>
-          <h6 class="my-0">${product.name}</h6>
-          <small class="text-body-secondary">${product.desc}</small>
-          </div>
-          <span class="text-body-secondary">R ${product.price}</span>
-          <button onclick= "calc(${product.price})"></button>
-          </li>
-      
-          </ul>
-          `;
-      
-          cartElement.appendChild(cartItem);
-        });
-      }
-      
-      // Function to save cart to localStorage
-      const saveCartToLocalStorage = () => {
-        localStorage.setItem("cart", JSON.stringify(cart));
-      };
-      
-      // Function to retrieve cart from localStorage (if available)
-      const retrieveCartFromLocalStorage = () => {
-        if (localStorage.getItem("cart")) {
-          cart = JSON.parse(localStorage.getItem("cart"));
-          cart.forEach((product) => {
-            updateCart(product);
-          });
-        }
-      };
-      
-      function addToCart(productId) {
-        const product = products.find((product) => product.id === productId);
-        if (product) {
-          cart.push(product);
-          product.quantity++;
-          saveCartToLocalStorage();
-          updateCart();
-        }
-      }
-      
-      retrieveCartFromLocalStorage();
-      updateCart();
-  // 2nd Function End
+let cart = JSON.parse(localStorage.getItem("Products")) || [];
+
+function addToCart(productId) {
+  const product = products.find((product) => product.id === productId);
+  if (product && product.quantity > 0) {
+    cart.push(product);
+    product.quantity--;
+    updateCart();
+  }
+}
+
+function removeFromCart(index) {
+  let removedProduct = cart.splice(index, 1)[0];
+  removedProduct.quantity++;
+  updateCart();
+}
+
+function updateCart() {
+  const cartContainer = document.getElementById("cart");
+  localStorage.setItem("Products", JSON.stringify(cart));
+  cartContainer.innerHTML = "";
+  cart.forEach((product, index) => {
+    const cartItem = document.createElement("div");
+    cartItem.innerHTML = `
+    <img src="${product.image}">
+      <span>${product.name}</span>
+      <span>${product.price}</span>
+      <input type="number" placeholder="1" min="1" width="50px" height="40px">
+      <p>Total $ ${product.price}</p>
+      <button onclick="removeFromCart(${index})" class="rembutton">✖</button>
+    `;
+    cartContainer.appendChild(cartItem);
+  });
+    calculateTotal();
+}
+
+function calculateTotal() {
+  let totalElement = document.getElementById("total");
+  let total = 0 
+  cart.forEach(item => {
+    total +=  eval(item.price)
+  })
+
+  totalElement.textContent = `$${total}`;
+}
+// Cart End
+displayProducts();
+
+updateCart();
 
 //   Start Modal
 // Get the modal

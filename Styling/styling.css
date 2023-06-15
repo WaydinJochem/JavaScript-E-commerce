@@ -208,6 +208,7 @@ button {
   margin-right: auto;
   margin-top: 2%;
   text-transform: uppercase;
+  border-radius: 25px;
 }
 
 button a {
