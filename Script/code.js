@@ -69,7 +69,7 @@
         let fisrtNode = document.querySelector('h1');
         let shopButton = document.createElement('button');
         shopButton.innerHTML = `
-        <a href="./Products.html" id= "proPage">Shop Garlor</a>
+        <a href="./checkout.html" id= "proPage">Shop Garlor</a>
         `;
         fisrtNode.appendChild(shopButton);
     }
