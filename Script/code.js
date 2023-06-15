@@ -64,17 +64,6 @@
     }
     promoItems();
 
-    // Products button link Start
-    function shopButton(){
-        let fisrtNode = document.querySelector('h1');
-        let shopButton = document.createElement('button');
-        shopButton.innerHTML = `
-        <a href="./checkout.html" id= "proPage">Shop Garlor</a>
-        `;
-        fisrtNode.appendChild(shopButton);
-    }
-    shopButton();
-    //Products button link End
 //Home Page Js End
 
 //Footer start
