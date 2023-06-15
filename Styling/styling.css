@@ -247,6 +247,8 @@ footer {
 #contact {
   background-image: radial-gradient(purple,black);
   padding: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 #contact label{
   display: flex;
