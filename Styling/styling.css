@@ -308,4 +308,17 @@ footer {
   cursor: pointer;
 }
 
+/* Inside Cart */
+.inner-layout {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.inner-img {
+  width: 80px;
+  height: 80px;
+}
+.inner-pro {
+  display: flex;
+  flex-direction: row;
+}
 /* Modal End */
